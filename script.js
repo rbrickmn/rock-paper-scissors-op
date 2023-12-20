@@ -1,4 +1,4 @@
-const playerChoice = "Scissors";
+const playerChoice = prompt("Rock, paper, or scissors?");
 let computerChoice = "";
 let playerScore = "";
 let computerScore = "";
@@ -90,4 +90,14 @@ function playGame() {
   }
 }
 
-playGame();
+// After prompt takes user's input, verify if it is one of the three moves. If not, alert the user & prompt again.
+
+if (
+  playerChoice === "Rock" ||
+  playerChoice === "Paper" ||
+  playerChoice === "Scissors"
+) {
+  playGame();
+} else {
+  alert("Please enter either Rock, Paper, or Scissors ONLY! Please refresh to try again.");
+}
